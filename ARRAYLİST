@@ -1,0 +1,35 @@
+//public class NewClass {
+    private ArrayList<String> array =  new ArrayList<String>();
+    public void show_singers(){
+        System.out.println("THERE ARE " + array.size() + " SİNGERS İN THE LİST ");
+        for (int i = 0 ; i <array.size();i++){
+            System.out.println((i+1) + ". SİNGER = " + array.get(i));
+            
+        }
+       
+            
+        } public void Add_singer(String name){
+            array.add(name);
+            System.out.println("THE LİST ARE UPDATED");
+            
+    }
+        public void update_singer(String name , int index){
+            array.set(index, name);
+            System.out.println("SİNGER LİST UPDATED");
+        }
+        public void delete_singer (int index){
+            String name = array.get(index);
+            array.remove(index);
+            System.out.println(name + " HAS BEEN DELETED FROM LİST");
+        }
+        public void searh_singer(String singer_name){
+            int index = array.indexOf(singer_name);
+            if (index >= 0 ){
+                System.out.println("SİNGER FOUND");
+                System.out.println(singer_name + " SİNGERS PLACE İS " + (index + 1) ) ;     
+                    
+            }
+            else{
+                System.out.println("SİNGER HASN'T BEEN FOUND");
+            }
+        }
